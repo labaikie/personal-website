@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ui.router']);
+var app = angular.module('myApp', ['ui.router', 'ngParallax']);
 app.config(MainRouter)
 
 function MainRouter($stateProvider, $urlRouterProvider) {
