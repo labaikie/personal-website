@@ -1,0 +1,225 @@
+/*fonts
+font-family: 'Source Code Pro';
+font-family: 'Nixie One', cursive;*/
+
+/*SHARED STYLING*/
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-size: large;
+  font-family: 'Nixie One', cursive;
+}
+
+header > div {
+  position: fixed;
+  right: 2%;
+  text-align: center;
+  z-index: 3;
+  color: #C6C9CE;
+  transition: color 0.7s ease;
+}
+
+#logo {
+  font-size: 230%;
+  bottom: 2%;
+}
+
+#sidebar {
+  top: 44%;
+  min-width: 15%;
+  text-align: right;
+  font-size: 110%;
+}
+
+#sidebar > div {
+  display: block;
+  margin: 5px auto;
+  font-family: 'Source Code Pro';
+  font-weight: 700;
+}
+
+#sidebar i {
+  padding-left: 3%;
+}
+
+#sidebar i:hover {
+  cursor: pointer;
+  color: #FBA24C;
+}
+
+#sidebar span {
+  opacity: 0;
+  color: #FBA24C;
+  transition: opacity 0.7s ease;
+}
+
+main > div {
+  min-height: 100vh;
+  background-color: #242D36;
+  /*border: 1px white solid; /*delete later*/*/
+}
+
+
+/*GREETING*/
+
+#greeting-section {
+  position: relative;
+}
+
+#name {
+  position: absolute;
+  top: 48%;
+  padding: 0 2%;
+  font-size: 400%;
+  color: #C6C9CE;
+}
+
+#name > span {
+  font-size: 70%;
+  color: #FBA24C;
+}
+
+/*SHARED SECTION*/
+
+.section-title {
+  margin-top: 14%;
+  padding: 1.5%;
+  font-family: 'Nixie One', cursive;
+  font-size: 200%;
+  color: #465967;
+  background-color: #C6C9CE;
+  opacity: 0.8;
+}
+
+.section-content {
+  padding: 0 0 3% 0;
+  font-family: 'Source Code Pro';
+  font-weight: 700;
+  font-size: 150%;
+  background-color: #C6C9CE;
+  opacity: 0.8;
+  /*border: 1px solid blue;*/
+}
+
+/*PORTFOLIO*/
+
+/*portfolio 'list' state*/
+
+.project > div {
+  width: 70%;
+  margin: 2% auto;
+  text-align: center;
+  color: #465967;
+  /*border: 1px solid blue;*/
+}
+
+.preview-img {
+  width: 100%;
+  border-radius: 100%;
+  border: 10px #94B6B8 solid;
+  transition: border-color 0.5s ease;
+}
+
+.preview-img:hover {
+  border: 10px #FBA24C solid;
+}
+
+/*[ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform:scale3d(0.5, 0.5, 0.5);
+  -moz-transform:scale3d(0.5, 0.5, 0.5);
+  transform:scale3d(0.5, 0.5, 0.5);
+}*/
+
+/*portfoio 'project' state*/
+
+#back-to-list {
+  color: #FBA24C;
+}
+
+#screen-shot {
+  margin: 0 5%;
+  width: 100%;
+}
+
+#project-info {
+  /*border: 1px black solid;*/
+  padding: 0 4%;
+  min-height: 255px;
+}
+
+#project-info i {
+  color: #FBA24C;
+}
+
+#project-description {
+  padding: 2% 0;
+  font-size: 80%;
+  font-weight: 400;
+}
+
+#skills {
+  background-color: #75989E;
+  padding: 1%;
+  text-align: center;
+  font-size: 60%;
+}
+
+#skills > div {
+  margin: 0.3% 5%;
+  width: 10%;
+  display: inline-block;
+}
+
+/*ABOUT*/
+
+#about-section {
+  background-image: url('/images/stone.png');
+}
+
+#about-content {
+  padding: 1% 10%;
+  margin-bottom: 2%;
+  font-size: 70%;
+  font-weight: 400;
+}
+
+#about-content > div {
+  padding-bottom: 1%;
+}
+
+#about-content span {
+  font-weight: 700;
+  color: #465967;
+}
+
+
+/*CONTACT*/
+
+#contact-section {
+  min-height: 60vh;
+  background-color: #465967; /*#750303*/
+}
+
+#contact-info {
+  padding: 3% 4%;
+  font-size: 85%;
+}
+
+#contact-info > div {
+  padding: 1% 0;
+}
+
+#contact-info a {
+  color: #FBA24C;
+}
+
+#profile-pic {
+  display: block;
+  margin: 0 auto;
+  width: 55%;
+  border: 10px solid #94B6B8;
+  border-radius: 100%;
+}
+
