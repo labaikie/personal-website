@@ -11,7 +11,6 @@
   <script src="js/greetingController.js"></script>
   <script src="js/portfolioController.js"></script>
   <script src="js/dotScroll.directive.js"></script>
-  <script src="./js/ngParallax.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Nixie+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -32,7 +31,7 @@
   <main>
 
     <div id="greeting-section" class="container-fluid" ng-controller="GreetingController as vm">
-      <div id="name">LA BAIK : <span id="title">Full-Stack Developer</span></div>
+      <div id="name">LA BAIK : <span id="title">{{vm.currentTitle}}</span></div>
     </div>
 
     <div id="portfolio-section" class="container-fluid" ui-view ng-animate="'view'" ng-controller="PortfolioController as vm">

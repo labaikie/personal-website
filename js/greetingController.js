@@ -1,26 +1,17 @@
-app.controller('GreetingController', function(){
+app.controller('GreetingController', function($interval){
   var vm = this;
 
-  vm.currentTitle;
-  vm.title = ['Web Developer', 'Full-Stack Developer'];
-  vm.setTitle = function() {
-    // setInterval(currentTitle=[])
-  }
-  // var api = "https://api.shutterstock.com/v2/images/search?query=donkey&page=1&limit=1"
-
-  // this.apiCall = function() {
-  //   $http.get({
-  //     method: 'GET',
-  //     url: api,
-  //     headers: {
-  //       'Authorization' : 'Basic NDRmYWQ3NTRjOTE3MTk4ZmE4ZGY6ODZkYjhjNTliZTQ4MTU3NzNiNjZkMjhjZmZiYjI2YWZmZTA3NThhYQ=='
-  //     }
-  //   }).then(function(res) {
-  //     console.log(res);
-  //   }).catch(function(err) {
-  //     console.log(err);
-  //   })
-  // }
+  vm.currentTitle = 'Full-Stack Developer';
+  vm.title = ['Web Developer', 'Design-Enthusiast', 'Full-Stack Developer'];
+  $interval(function(){
+        if (vm.currentTitle == vm.title[0]) {
+          vm.currentTitle = vm.title[1];
+        } else if (vm.currentTitle == vm.title[1]) {
+          vm.currentTitle = vm.title[2];
+        } else {
+          vm.currentTitle = vm.title[0];
+        }
+  }, 3000)
 
   return vm;
 })

@@ -80,6 +80,10 @@ main > div {
   color: #FBA24C;
 }
 
+#title {
+  transition: opacity 0.5s ease;
+}
+
 /*SHARED SECTION*/
 
 .section-title {
@@ -175,7 +179,7 @@ main > div {
 /*ABOUT*/
 
 #about-section {
-  background-image: url('/images/stone.png');
+  background-image: url('/images/stone-vertical.png');
 }
 
 #about-content {
@@ -203,7 +207,7 @@ main > div {
 }
 
 #contact-info {
-  padding: 3% 4%;
+  padding: 2.3% 4%;
   font-size: 85%;
 }
 
@@ -213,6 +217,10 @@ main > div {
 
 #contact-info a {
   color: #FBA24C;
+}
+
+#contact-info i {
+  font-size: 200%;
 }
 
 #profile-pic {
