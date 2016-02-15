@@ -87,17 +87,16 @@ main > div {
 /*SHARED SECTION*/
 
 .section-title {
-  margin-top: 14%;
-  padding: 1.5%;
+  padding-bottom: 1%;
   font-family: 'Nixie One', cursive;
-  font-size: 200%;
+  font-size: 150%;
   color: #465967;
   background-color: #C6C9CE;
   opacity: 0.8;
 }
 
 .section-content {
-  padding: 0 0 3% 0;
+  padding: 3% 0;
   font-family: 'Source Code Pro';
   font-weight: 700;
   font-size: 150%;
