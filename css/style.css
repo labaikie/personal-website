@@ -55,7 +55,6 @@ header > div {
 }
 
 main > div {
-  min-height: 100vh;
   background-color: #242D36;
   /*border: 1px white solid; /*delete later*/*/
 }
@@ -65,6 +64,7 @@ main > div {
 
 #greeting-section {
   position: relative;
+  min-height: 100vh;
 }
 
 #name {
