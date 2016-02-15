@@ -143,7 +143,6 @@ main > div {
 }
 
 #screen-shot {
-  margin: 0 5%;
   width: 100%;
 }
 
@@ -222,6 +221,7 @@ main > div {
 
 #contact-info i {
   font-size: 200%;
+  color: #75989E;
 }
 
 #profile-pic {
