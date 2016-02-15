@@ -180,12 +180,13 @@ main > div {
 
 #about-section {
   background-image: url('/images/stone-vertical.png');
+  background-size: 100%;
 }
 
 #about-content {
   padding: 1% 10%;
   margin-bottom: 2%;
-  font-size: 70%;
+  font-size: 0.8em;
   font-weight: 400;
 }
 
@@ -216,7 +217,7 @@ main > div {
 }
 
 #contact-info a {
-  color: #FBA24C;
+  color: #75989E;
 }
 
 #contact-info i {
