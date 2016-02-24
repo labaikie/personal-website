@@ -5,7 +5,16 @@ app.controller('PortfolioController', function(){
     vm.currentProject = project;
   }
 
-  vm.projects = { bbq:
+  vm.projects = {
+                  welive:
+                  { name: 'WeliveLA',
+                    description: 'To be announced ...',
+                    skills: ['Ionic', 'AngularJS', 'NodeJS', 'ExpressJS', 'MongoDB', 'Mongoose', 'GoogleMaps','API', 'Token-Auth' 'JavaScript', 'JQuery'],
+                    url: 'http://http://welivelav3.s3-website-us-west-2.amazonaws.com/',
+                    imgUrl:'../images/welive.png',
+                    ss:'../images/welive_preview.png'
+                  },
+                  bbq:
                   { name: 'Bar-BQ',
                     description: "Bar-BQ is a JavaScript based click, drag, and drop game simulating a BBQ setting. Clear orders and don't let your food burn!",
                     skills: ['JavaScript','JQuery', 'JQueryUI', 'HTML', 'CSS'],
@@ -32,14 +41,6 @@ app.controller('PortfolioController', function(){
                     imgUrl:'../images/venture-us.png',
                     ss:'../images/ventureus_screen_1.png'
                   },
-                  project4:
-                  { name: 'Project 4',
-                    description: 'To be announced ...',
-                    skills: ['IONIC', 'AngularJS', 'NodeJS', 'ExpressJS', 'MongoDB', 'Mongoose', 'JavaScript', 'JQuery'],
-                    url: '',
-                    imgUrl:'../images/venture-us.png',
-                    ss:'../images/ventureus_screen_1.png'
-                  }
                   // bikeLA:
                   // { name: 'BikeLA',
                   //   description: '',
