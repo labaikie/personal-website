@@ -11,6 +11,7 @@ app.controller('PortfolioController', function(){
                     description: 'WeliveLA is a mobile app that lets you search for apartments by neighborhoods in LA and browse local businesses at the same time. Save apartments and compare them by criteria, including distance to the points of interest, price, and their rating on yelp. Also, make your own notes on the saved apartments.',
                     skills: ['Ionic', 'AngularJS', 'NodeJS', 'ExpressJS', 'MongoDB', 'Mongoose', 'GoogleMaps','API', 'JWT', 'JavaScript'],
                     url: 'http://welivelav3.s3-website-us-west-2.amazonaws.com/',
+                    git: 'https://github.com/labaikie/welive-la',
                     imgUrl:'../images/welive.png',
                     ss:'../images/welive_preview.png'
                   },
