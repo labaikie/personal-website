@@ -33,8 +33,7 @@
   <main>
 
     <div id="greeting-section" class="container-fluid" ng-controller="GreetingController as vm">
-      <div ng-controller="CanvasController as canvas">
-        <canvas ng-init="canvas.load()"></canvas>
+      <div ng-controller="CanvasController as canvas" ng-init="canvas.load()">
       </div>
       <div id="name">LA BAIK :
         <span id="title">{{vm.currentTitle}}</span>

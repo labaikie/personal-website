@@ -1,25 +1,23 @@
-
-
 <div class="section-content row">
   <div class="section-title col-lg-12 col-xs-12">
     <a id="back-to-list" ui-sref-active="active" ui-sref='portfolio'>
       <i class="fa fa-chevron-left"></i>
+      <span>{{vm.currentProject.name.toUpperCase()}}</span>
     </a>
-    <span>{{vm.currentProject.name.toUpperCase()}}</span>
   </div>
   <div class="col-lg-4 col-xs-4">
     <img id="screen-shot" src={{vm.currentProject.ss}}>
   </div>
   <div id="project-info" class="col-lg-8 col-xs-8">
     <div>
-      <a target="_tab" href="{{vm.currentProject.url}}">
+      <a id="site-link" target="_tab" href="{{vm.currentProject.url}}">
         <i class="fa fa-hand-o-right"></i>
+        <span>Site</span>
       </a>
-      <span>Site</span>
-      <a target="_tab" href="{{vm.currentProject.git}}">
+      <a id="github-link" target="_tab" href="{{vm.currentProject.git}}">
         <i class="fa fa-github"></i>
+        <span>Github</span>
       </a>
-      <span>Github</span>
     </div>
     <div id="project-description">{{vm.currentProject.description}}</div>
     <div id="skills">
