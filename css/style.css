@@ -104,7 +104,7 @@ canvas {
 /*SHARED SECTION*/
 
 .section-title {
-  padding-bottom: 1%;
+  padding-bottom: 4%;
   font-family: 'Nixie One', cursive;
   font-size: 150%;
   color: #465967;
@@ -113,7 +113,7 @@ canvas {
 }
 
 .section-content {
-  padding: 3% 5%;
+  padding: 5% 5%;
   font-family: 'Source Code Pro';
   font-weight: 700;
   font-size: 150%;
@@ -125,13 +125,16 @@ canvas {
 /*PORTFOLIO*/
 
 /*portfolio 'list' state*/
+.project{
+  min-height: 380px;
+}
 
 .project > div {
   width: 70%;
   margin: 2% auto;
   text-align: center;
   color: #465967;
-  /*border: 1px solid blue;*/
+  border: 1px solid blue;
 }
 
 .preview-img {
@@ -143,6 +146,7 @@ canvas {
 
 .preview-img:hover {
   border: 10px #FBA24C solid;
+  cursor: pointer;
 }
 
 #back-to-list, #site-link, #github-link {
@@ -151,16 +155,27 @@ canvas {
 
 #back-to-list:hover, #site-link:hover, #github-link:hover {
   color: #FBA24C;
+  cursor: pointer;
+}
+
+#project-preview, #project-info {
+  min-height: 380px;
+  position: relative;
+  border: 1px solid black;
 }
 
 #screen-shot {
-  width: 100%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15em;
 }
 
 #project-info {
   /*border: 1px black solid;*/
   padding: 0 4%;
-  min-height: 255px;
 }
 
 #project-info i {
@@ -208,7 +223,6 @@ canvas {
   font-weight: 700;
   color: #465967;
 }
-
 
 /*CONTACT*/
 

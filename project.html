@@ -1,14 +1,17 @@
 <div class="section-content row">
+
   <div class="section-title col-lg-12 col-xs-12">
     <a id="back-to-list" ui-sref-active="active" ui-sref='portfolio'>
       <i class="fa fa-chevron-left"></i>
       <span>{{vm.currentProject.name.toUpperCase()}}</span>
     </a>
   </div>
-  <div class="col-lg-4 col-xs-4">
+
+  <div id="project-preview" class="col-lg-4 col-xs-12">
     <img id="screen-shot" src={{vm.currentProject.ss}}>
   </div>
-  <div id="project-info" class="col-lg-8 col-xs-8">
+
+  <div id="project-info" class="col-lg-8 col-xs-12">
     <div>
       <a id="site-link" target="_tab" href="{{vm.currentProject.url}}">
         <i class="fa fa-hand-o-right"></i>
@@ -24,4 +27,5 @@
       <div class="skills" ng-repeat="skill in vm.currentProject.skills">{{skill}}</div>
     </div>
   </div>
+
 </div>
