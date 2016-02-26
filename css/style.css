@@ -138,14 +138,14 @@ canvas {
   width: 70%;
   margin: 2% auto;
   text-align: center;
-  color: #465967;
+  color: #94B6B8;
   /*border: 1px solid blue;*/
 }
 
 .preview-img {
   width: 100%;
   border-radius: 100%;
-  border: 10px #94B6B8 solid;
+  border: 10px #242D36 solid;
   transition: border-color 0.5s ease;
 }
 
@@ -180,6 +180,7 @@ canvas {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 15em;
+  border: 10px #242D36 solid;
 }
 
 #project-info > div {
