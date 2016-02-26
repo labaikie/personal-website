@@ -56,7 +56,6 @@ header > div {
 
 main > div {
   background-color: #242D36;
-  /*border: 1px white solid; /*delete later*/
 }
 
 /*GREETING*/
@@ -242,21 +241,33 @@ canvas {
 /*CONTACT*/
 
 #contact-section {
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: #465967; /*#750303*/
 }
 
 #contact-info {
-  padding: 2.3% 4%;
-  font-size: 85%;
+  font-size: 1.2em;
+  min-height: 275px;
+  position: relative;
+  border: 1px blue solid;
 }
 
 #contact-info > div {
-  padding: 1% 0;
+  width: 55%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px black solid;
 }
 
 #contact-info a {
   color: #75989E;
+  text-decoration: none;
+}
+
+#contact-info a:hover, #contact-info i:hover{
+  color: #FBA24C;
 }
 
 #contact-info i {
@@ -264,11 +275,16 @@ canvas {
   color: #75989E;
 }
 
+#profile-container {
+  padding: 0 6%;
+  min-height: 275px;
+}
+
 #profile-pic {
   display: block;
   margin: 0 auto;
-  width: 55%;
-  border: 10px solid #94B6B8;
+  width: 10em;
+  border: 10px solid #242D36;
   border-radius: 100%;
 }
 
