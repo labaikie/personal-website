@@ -51,6 +51,12 @@ app.controller('CanvasController', function(){
 
     // Add interactivity
     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+    document.addEventListener( 'touchmove', onDocumentMouseMove, false );
+    $(document).on('vmousemove', function(event) {
+      mouseX = ( event.clientX - windowHalfX ) * 10;
+      mouseY = ( event.clientY - windowHalfY ) * 10;
+    });
+
     window.addEventListener( 'resize', onWindowResize, false );
 
     function onWindowResize() {
