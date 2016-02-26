@@ -42,12 +42,6 @@ app.controller('PortfolioController', function(){
                     imgUrl:'../images/venture-us.png',
                     ss:'../images/ventureus_screen_1.png'
                   }
-                  // bikeLA:
-                  // { name: 'BikeLA',
-                  //   description: '',
-                  //   skills: []
-                  //   url: ''
-                  // }
                 }
 
   return vm;
