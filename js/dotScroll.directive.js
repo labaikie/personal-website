@@ -37,10 +37,10 @@ function ScrollDirective($document, $window) {
       var scroll_pos = 0;
       $(document).scroll(function() {  // header change color upon scroll down
         scroll_pos = $(this).scrollTop();
-        if(scroll_pos > $('#portfolio-section').offset().top) {
-            $('header > div').css('color', '#242D36');
-        }else {
+        if(scroll_pos < $('#portfolio-section').offset().top || scroll_pos > $('#contact-section').offset().top) {
             $('header > div').css('color', '#C6C9CE');
+        } else {
+            $('header > div').css('color', '#242D36');
         }
       });
 
