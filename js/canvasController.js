@@ -2,88 +2,90 @@ app.controller('CanvasController', function(){
   var vm = this;
 
   vm.load = function() {
-    // Set up scene - entire screen
-    var scene = new THREE.Scene();
+    var mouseX = 0, mouseY = 0;
+    var windowHalfX = window.innerWidth / 2;
+    var windowHalfY = window.innerHeight / 2;
+    // Set up camera
+    var camera      = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 10000 );
+    camera.position.set = (100000, 0, 3200); //  x y z
+    var scene       = new THREE.Scene();
 
-    // Set up camera - different types of cameras; args: 75 FOV, aspect ratio of width/height, near plain to see an object, far plain
-    var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+    // create mesh variables
+    var geometry      = new THREE.Geometry(),
+        geometryCount = 800,
+        colors = [ 0xC6C9CE, 0x465967, 0x75989E, 0x94B6B8 ],
+        material = new THREE.PointsMaterial({
+          size: 1.3,
+          vertexColors: THREE.VertexColors,
+          depthTest: false,
+          opacity: 0.4,
+          sizeAttenuation: false,
+          transparent: true
+        });
 
-    var renderer = new THREE.WebGLRenderer({alpha:true});
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    // appends canvas to html
-    document.body.appendChild( renderer.domElement );
-
-    // Zoom the camera out so we can see the cube; set z position to 5
-    // Camera is pointing directly in the center; need to add a rotation to the camera
-    // camera.position.set(1, 3, 5,) x y z
-    camera.position.z = 20;
-
-    //   var geometry = new THREE.SphereGeometry( 5, 32, 32 );
-    //   var material = new THREE.MeshNormalMaterial(  );
-    //   var sphere = new THREE.Mesh( geometry, material );
-
-    // create the particle variables
-    var particleCount = 500,
-      particles = new THREE.Geometry(),
-      // only colors in vertices
-      pMaterial = new THREE.PointsMaterial({
-        vertexColors: THREE.VertexColors,
-        size: 5
-      });
-
-    // now create the individual particles
-    for (var p = 0; p < particleCount; p++) {
-
-      // create a particle with random
-      // position values, -250 -> 250
-      var pX = Math.random() * 500 - 250,
-          pY = Math.random() * 500 - 250,
-          pZ = Math.random() * 500 - 250,
-          particle = new THREE.Vector3(pX, pY, pZ);
-
-      // add it to the geometry
-      particles.vertices.push(particle)
-      particles.colors.push(new THREE.Color(Math.random(), Math.random(), Math.random()))
+    // create # of geometry
+    for (var i = 0; i < geometryCount; i++) {
+      var vertex = new THREE.Vector3();
+        vertex.x = Math.random() * 4000 - 2000;
+        vertex.y = Math.random() * 4000 - 2000;
+        vertex.z = Math.random() * 4000 - 2000;
+      geometry.vertices.push(vertex);
+      geometry.colors.push(new THREE.Color(colors[Math.floor(Math.random() * colors.length)]));
     }
 
-    // create the particle system
-    var particleSystem = new THREE.Points( particles, pMaterial);
+    var mesh = new THREE.Points(geometry, material);
 
-    // add it to the scene
-    scene.add(particleSystem);
+    // add them to the scene
+    scene.add(mesh);
 
-    // Add interactivity based on mouse movement
-    $(document).mousemove(function(event) {
-      // get mouse position on the screen and normalize
-      var y = (event.pageX / window.innerWidth) - 0.5;
-      var x = (event.pageY / window.innerHeight) - 0.5;
+    // define renderer and set canvas to html
+    var renderer = new THREE.WebGLRenderer({
+                    alpha: true,
+                    preserveDrawingBuffer: true
+                  });
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.sortObjects = false;
+    renderer.autoClearColor = false;
+    document.body.appendChild( renderer.domElement );
 
-      // move camera by radians
-      var scalingFactor = 2
+    // Add interactivity
+    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+    window.addEventListener( 'resize', onWindowResize, false );
 
-      camera.rotation.y = y * scalingFactor;
-      camera.rotation.x = x * scalingFactor;
-    });
+    function onWindowResize() {
 
-    // The render loop 60 frames per second
+        windowHalfX = window.innerWidth / 2;
+        windowHalfY = window.innerHeight / 2;
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize( window.innerWidth, window.innerHeight );
+
+    }
+
+    function onDocumentMouseMove(event) {
+      mouseX = ( event.clientX - windowHalfX ) * 10;
+      mouseY = ( event.clientY - windowHalfY ) * 10;
+    }
+
+    function animate() {
+      requestAnimationFrame( animate );
+
+      render();
+      stats.update();
+    }
+
     function render() {
-        requestAnimationFrame( render );
+        camera.position.x += ( mouseX - camera.position.x ) * .05;
+        camera.position.y += ( - mouseY - camera.position.y ) * .05;
 
-        // Any updates to scene, camera, or objects go here
-        // That is, this is where the animation happens!
-
-        // NEED TO APPLY SETTINGS SO THAT WHEN YOU RESIZE THE BROWSER THE CANVAS ALSO REFRESHES
-        // camera.rotation.y += 0.0125
-        // camera.rotation.x += 0.0125
-
-        // Add this to watch your particles swirl!
-        particleSystem.rotation.y += .001;
+        camera.lookAt( scene.position );
 
         renderer.render( scene, camera );
     }
-    render();
-
-
+    animate();
   }
 
   return vm;

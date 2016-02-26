@@ -249,7 +249,7 @@ canvas {
   font-size: 1.2em;
   min-height: 275px;
   position: relative;
-  border: 1px blue solid;
+  /*border: 1px blue solid;*/
 }
 
 #contact-info > div {
@@ -258,7 +258,7 @@ canvas {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px black solid;
+  /*border: 1px black solid;*/
 }
 
 #contact-info a {
