@@ -51,7 +51,10 @@ app.controller('CanvasController', function(){
 
     // Add interactivity
     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-    document.addEventListener( 'touchmove', onDocumentMouseMove, false );
+    $(document).bind('touchmove', function(event) {
+      mouseX = ( event.clientX - windowHalfX ) * 10;
+      mouseY = ( event.clientY - windowHalfY ) * 10;
+    });
     $(document).on('vmousemove', function(event) {
       mouseX = ( event.clientX - windowHalfX ) * 10;
       mouseY = ( event.clientY - windowHalfY ) * 10;
