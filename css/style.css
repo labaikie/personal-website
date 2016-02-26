@@ -1,6 +1,9 @@
 /*fonts
 font-family: 'Source Code Pro';
-font-family: 'Nixie One', cursive;*/
+font-family: 'Nixie One', cursive;
+font-family: 'Syncopate', sans-serif;
+font-family: 'Cousine';
+*/
 
 /*SHARED STYLING*/
 
@@ -8,7 +11,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-size: large;
-  font-family: 'Nixie One', cursive;
+  font-family: 'Syncopate', sans-serif;
 }
 
 header > div {
@@ -21,7 +24,7 @@ header > div {
 }
 
 #logo {
-  font-size: 230%;
+  font-size: 200%;
   bottom: 2%;
 }
 
@@ -35,7 +38,7 @@ header > div {
 #sidebar > div {
   display: block;
   margin: 5px auto;
-  font-family: 'Source Code Pro';
+  font-family: 'Cousine';
   font-weight: 700;
 }
 
@@ -83,6 +86,8 @@ canvas {
 }
 
 #name > span {
+  font-family: 'Cousine';
+  font-weight: 700;
   font-size: 70%;
   color: #FBA24C;
 }
@@ -103,7 +108,7 @@ canvas {
 
 .section-title {
   padding-bottom: 2%;
-  font-family: 'Nixie One', cursive;
+  font-family: 'Syncopate', sans-serif;
   font-size: 150%;
   color: #465967;
   background-color: #C6C9CE;
@@ -112,7 +117,7 @@ canvas {
 
 .section-content {
   padding: 5% 5%;
-  font-family: 'Source Code Pro';
+  font-family: 'Cousine';
   font-weight: 700;
   font-size: 150%;
   background-color: #C6C9CE;
@@ -197,7 +202,7 @@ canvas {
 #skills {
   background-color: #75989E;
   text-align: center;
-  font-size: 60%;
+  font-size: 55%;
 }
 
 #skills > div {
@@ -217,7 +222,7 @@ canvas {
   padding: 1% 10%;
   margin-bottom: 2%;
   font-size: 0.9em;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 #about-content > div {
@@ -226,6 +231,7 @@ canvas {
 
 #about-content span {
   font-weight: 700;
+  font-family: 'Syncopate', sans-serif;
   color: #465967;
   animation: highlight 20s infinite;
 }

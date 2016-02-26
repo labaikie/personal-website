@@ -18,7 +18,7 @@ app.controller('CanvasController', function(){
           size: 1.3,
           vertexColors: THREE.VertexColors,
           depthTest: false,
-          opacity: 0.4,
+          opacity: 0.3,
           sizeAttenuation: false,
           transparent: true
         });
