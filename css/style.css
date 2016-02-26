@@ -27,7 +27,7 @@ header > div {
 
 #sidebar {
   top: 44%;
-  min-width: 15%;
+  min-width: 12%;
   text-align: right;
   font-size: 110%;
 }
@@ -104,7 +104,7 @@ canvas {
 /*SHARED SECTION*/
 
 .section-title {
-  padding-bottom: 4%;
+  padding-bottom: 2%;
   font-family: 'Nixie One', cursive;
   font-size: 150%;
   color: #465967;
@@ -126,7 +126,9 @@ canvas {
 
 /*portfolio 'list' state*/
 .project{
-  min-height: 380px;
+  padding-top: 2%;
+  min-height: 360px;
+  position: relative;
 }
 
 .project > div {
@@ -134,7 +136,7 @@ canvas {
   margin: 2% auto;
   text-align: center;
   color: #465967;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
 
 .preview-img {
@@ -159,9 +161,9 @@ canvas {
 }
 
 #project-preview, #project-info {
-  min-height: 380px;
+  min-height: 360px;
   position: relative;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 #screen-shot {
@@ -173,9 +175,11 @@ canvas {
   width: 15em;
 }
 
-#project-info {
-  /*border: 1px black solid;*/
-  padding: 0 4%;
+#project-info > div {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 #project-info i {
@@ -190,7 +194,6 @@ canvas {
 
 #skills {
   background-color: #75989E;
-  padding: 1%;
   text-align: center;
   font-size: 60%;
 }

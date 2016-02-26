@@ -21,10 +21,10 @@
         <i class="fa fa-github"></i>
         <span>Github</span>
       </a>
-    </div>
-    <div id="project-description">{{vm.currentProject.description}}</div>
-    <div id="skills">
-      <div class="skills" ng-repeat="skill in vm.currentProject.skills">{{skill}}</div>
+      <div id="project-description">{{vm.currentProject.description}}</div>
+      <div id="skills">
+        <div ng-repeat="skill in vm.currentProject.skills">{{skill}}</div>
+      </div>
     </div>
   </div>
 
