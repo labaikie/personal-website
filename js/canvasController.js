@@ -83,7 +83,6 @@ app.controller('CanvasController', function(){
       requestAnimationFrame( animate );
 
       render();
-      stats.update();
     }
 
     function render() {
